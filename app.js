@@ -6,12 +6,18 @@ var url = "mongodb://localhost:27017/statsdb";
 //Connect to the database
 MongoClient.connect( url, {
     useNewUrlParser: true, useUnifiedTopology: true
-    }, function ( err, db ) {
+}, function ( err, db ) {
+    // if ( err ) throw err;
+    // console.log( 'statsdb created!' );
+    // db.close();
+
+    var dbo = db.db( "statsdb" );
+    dbo.createCollection( "uscensus", function ( err, res ) {
         if ( err ) throw err;
-        console.log( 'statsdb created!' );
+        console.log( "uscensus collection created!" );
         db.close();
-    }
-);
+    } );
+} );
 
 
 
