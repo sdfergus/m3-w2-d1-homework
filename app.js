@@ -100,16 +100,31 @@ MongoClient.connect( url, {
     //     db.close();
     // } )
 
-    var query = { state: /^C/ };
-    dbo.collection( "uscensus" ).find( query ).toArray( function ( err, result ) {
+    // var query = { state: /^C/ };
+    // dbo.collection( "uscensus" ).find( query ).toArray( function ( err, result ) {
+    //     if ( err ) throw err;
+    //     console.log( `The income for all cities in California:` );
+    //     result.forEach( city => {
+    //         console.log( `${ city.city },${ city.state }: ${ city.income }` );
+    //     } )
+    //     db.close();
+    // } )
+
+
+    // var query = { state: "AK" };
+    // var incomeAge = { $set: { income: "38910", age: "46" } };
+    // dbo.collection( "uscensus" ).updateOne( query, incomeAge, function ( err, res ) {
+    //     if ( err ) throw err;
+    //     console.log( "Alaska's income & age updated" );
+    //     db.close();
+    // } )
+
+    var sort = { state: 1 };
+    dbo.collection( "uscensus" ).find().sort( sort ).toArray( function ( err, result ) {
         if ( err ) throw err;
-        console.log( `The income for all cities in California:` );
-        result.forEach( city => {
-            console.log( `${ city.city },${ city.state }: ${ city.income }` );
-        } )
+        console.log( 'Records sorted in ascending order by State: ' );
+        console.log( result );
         db.close();
     } )
-
-
 
 } );
