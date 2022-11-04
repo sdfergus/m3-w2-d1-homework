@@ -1,4 +1,17 @@
+var MongoClient = require( 'mongodb' ).MongoClient;
 
+//Database name: statsdb
+var url = "mongodb://localhost:27017/statsdb";
+
+//Connect to the database
+MongoClient.connect( url, {
+    useNewUrlParser: true, useUnifiedTopology: true
+    }, function ( err, db ) {
+        if ( err ) throw err;
+        console.log( 'statsdb created!' );
+        db.close();
+    }
+);
 
 
 
