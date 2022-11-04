@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sdfergus/m3-w2-d1-homework/issues"
   },
-  "homepage": "https://github.com/sdfergus/m3-w2-d1-homework#readme"
+  "homepage": "https://github.com/sdfergus/m3-w2-d1-homework#readme",
+  "dependencies": {
+    "mongodb": "^4.11.0"
+  }
 }
