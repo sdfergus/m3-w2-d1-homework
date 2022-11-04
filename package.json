@@ -1,0 +1,19 @@
+{
+  "name": "mongodb_homework",
+  "version": "1.0.0",
+  "description": "MBA Back-End Hw - MongoDB Cont'd",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdfergus/m3-w2-d1-homework.git"
+  },
+  "author": "Shandira Ferguson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdfergus/m3-w2-d1-homework/issues"
+  },
+  "homepage": "https://github.com/sdfergus/m3-w2-d1-homework#readme"
+}
